@@ -3,9 +3,13 @@
 const Card = require('./../models/card');
 
 const createCard = async (req,res) => {
-  const newCard = new Card(req.body);
+  console.log('**************************************')
+  console.log(req.body)
+  const {id, user_id, title, text, user_name} = req.body;
+  const newCard = new Card({id, user_id, title, text, user_name, posted_at});
   try {
-    newCard.save();
+    await newCard.save();
+    res.status(201).send('all gucci');
   } catch (e) {
     res.status(400).send(`error in saving card: ${e}`);
   }
@@ -13,7 +17,7 @@ const createCard = async (req,res) => {
 
 const fetchCards = async (req, res) => {
   try {
-    const cardList = await URLSearchParams.find({});
+    const cardList = await Card.find({});
     res.status(201).send(cardList);
   } catch (e) {
     res.status(404).send(`error finding cards: ${e}`);

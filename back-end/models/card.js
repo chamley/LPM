@@ -20,7 +20,12 @@ const cardSchema = mongoose.Schema({
   user_name: {
     type: String,
     required: true,
+  },
+  posted_at: {
+    type: Date,
+    required:true
   }
 });
 
 module.exports = mongoose.model('Card', cardSchema);
+

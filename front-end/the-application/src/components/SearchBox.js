@@ -18,12 +18,18 @@ export default function SearchBox () {
 
   const [checked, setChecked] = useState(false);
 
-  useEffect(()=> {
-    textSearch('tomato');
+  useEffect( ()=> {
+    if(checked) {
+      textSearch('tomato');
+    } else {
+      textSearch("")
+    }
+    
   }, [checked] )
 
   return(
     <div>
+      
       <input
         value={text}
         onChange={event =>setText(event.target.value)}
@@ -34,6 +40,7 @@ export default function SearchBox () {
       <input 
       type="checkbox"
       name="mycheckbox"
+
       checked={checked}
       onChange={ev=>setChecked(ev.target.checked)}
       />

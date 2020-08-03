@@ -11,7 +11,6 @@ export default function Card({
   text,
   user_name
 }) {
-  console.log(text+" "+title);
   return (
     <div className="card">
       <div className="title"><b>{title}</b></div>
