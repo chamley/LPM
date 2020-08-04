@@ -35,6 +35,9 @@ export function CardProvider ({
     loadData();
   },[])
 
+  const saveCard = (title, text) => {
+    console.log(`...trying to add card: ${title}`);
+  }
 
   const addCard = (title, text) => {
     const newCard = {
@@ -91,7 +94,7 @@ export function CardProvider ({
   // }
 
   return (
-    <CardContext.Provider value={{ cards, addCard, textSearch }}>
+    <CardContext.Provider value={{ cards, addCard, textSearch, saveCard }}>
       {children}
     </CardContext.Provider>
   );

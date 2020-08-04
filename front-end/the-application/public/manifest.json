@@ -1,8 +1,8 @@
 
 
 {
-  "short_name":"Project solo",
-  "name":"Mon Marché",
+  "short_name":"PD",
+  "name":"Pet Declare",
 
   "icons": [
     {
@@ -13,7 +13,7 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color":"lightblue",
-  "background_color": "blue"
+  "theme_color":"#FEFEFE",
+  "background_color": "#9097FA"
 
 }

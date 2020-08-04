@@ -25,7 +25,7 @@ export default function AddCardForm() {
             value={title}
             onChange={e=>setTitle(e.target.value)}
             type="text"
-            placeholder="Titre de votre offre..."
+            placeholder="Please put the nearest town in your title .."
             required
           />
         </p>
@@ -35,13 +35,13 @@ export default function AddCardForm() {
             onChange={e=>setText(e.target.value)}
             type="textarea"
             style= { {width:300, height:150}}
-            placeholder="Decrivez votre offre..."
+            placeholder="Please be as accurate as you can with your location details"
             required
           />
         </p>
         <p>
           <button>
-            Ajouter mon offre
+            Declare
           </button>
         </p>
       </form>

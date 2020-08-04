@@ -34,19 +34,22 @@ export default function SearchBox () {
         value={text}
         onChange={event =>setText(event.target.value)}
         type="text"
-        placeholder="Que cherchez-vous?"
+        placeholder="Search Postings ...."
         required
       />
-      <input 
-      type="checkbox"
-      name="mycheckbox"
 
-      checked={checked}
-      onChange={ev=>setChecked(ev.target.checked)}
-      />
     </div>
   );
 
 
 
 }
+
+///tomato example i did with chris
+/*      <input 
+      type="checkbox"
+      name="mycheckbox"
+
+      checked={checked}
+      onChange={ev=>setChecked(ev.target.checked)}
+      /> */
