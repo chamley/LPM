@@ -1,0 +1,22 @@
+{
+  "name": "lpm",
+  "version": "1.0.0",
+  "description": "react-express-heroku",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm install --prefix back-end && npm install --prefix front-end && npm run build --prefix front-end"
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chamley/LPM.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chamley/LPM/issues"
+  },
+  "homepage": "https://github.com/chamley/LPM#readme"
+  
+}
