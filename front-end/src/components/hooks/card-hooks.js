@@ -5,7 +5,7 @@ import { v4 } from "uuid";
 
 const CardContext = createContext();
 export const useCards = () => useContext(CardContext);
-
+const API_URL = process.env.REACT_APP_API_URL;
 
 
 export function CardProvider ({
@@ -15,7 +15,7 @@ export function CardProvider ({
   const [cards, setCards] = useState([]);
 
   const loadData = async function () {
-    fetch('http://localhost:3001/getAllCards', {
+    fetch(API_URL+'/getAllCards', {
       method:'GET',
       mode:'cors',
     })
@@ -49,7 +49,7 @@ export function CardProvider ({
       posted_at: new Date().toString()
     }
 
-    fetch('http://localhost:3001/addCard', {
+    fetch(API_URL+'/addCard', {
       method: 'POST',
       mode: 'cors',
       headers: {'Content-Type': 'application/json'},

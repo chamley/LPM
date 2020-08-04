@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 const DB_PORT = 27017;
 const DB_NAME = 'market';
+const DATABASE_URL = process.env.DATABASE_URL || "mongodb://localhost:27017/market";
 
 mongoose.connect(
-  `mongodb://localhost:${DB_PORT}/${DB_NAME}`,
+  DATABASE_URL,
   { useNewUrlParser: true, useUnifiedTopology: true },
   (err) => {
     if (err) {
