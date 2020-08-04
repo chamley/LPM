@@ -7,8 +7,10 @@ const SERVER_PORT =  3001;
 const router = require('./router');
 
 app.use(cors());
+
 app.use(express.json());
 app.use(router);
+
 app.listen(SERVER_PORT, (err) => {
   if (err) {
     console.log(`😞 Sorry, something went wrong! ${err}`); // eslint-disable-line no-console

@@ -5,7 +5,7 @@ const Card = require('./../models/card');
 const createCard = async (req,res) => {
   console.log('**************************************')
   console.log(req.body)
-  const {id, user_id, title, text, user_name} = req.body;
+  const {id, user_id, title, text, user_name, posted_at} = req.body;
   const newCard = new Card({id, user_id, title, text, user_name, posted_at});
   try {
     await newCard.save();

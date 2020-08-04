@@ -22,7 +22,7 @@ const cardSchema = mongoose.Schema({
     required: true,
   },
   posted_at: {
-    type: Date,
+    type: String,
     required:true
   }
 });

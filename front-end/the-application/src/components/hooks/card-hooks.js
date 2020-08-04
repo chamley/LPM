@@ -43,7 +43,7 @@ export function CardProvider ({
       title,
       text,
       user_name:v4(),
-      posted_at:Date.now()
+      posted_at: new Date().toString()
     }
 
     fetch('http://localhost:3001/addCard', {
