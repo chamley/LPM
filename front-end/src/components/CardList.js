@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from './Card';
+import StandardPost from './Card';
 
 import { useCards } from "./hooks/card-hooks"
 
@@ -12,7 +12,7 @@ export default function CardList () {
     <div className="card-list">
        
       { cards.filter( (card)=> card.shouldRender).map( (card) => 
-        (<Card
+        (<StandardPost
         key={card.id}
         {...card}
         />)

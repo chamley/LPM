@@ -25,17 +25,17 @@ self.addEventListener('install', (event)=> {
 
 // Listen for requests --> network first logic, prioritize network usage over caching
 
-self.addEventListener('fetch', (event)=> {
-  event.respondWith( //when we see a fetch request we want to respond with something
-    caches.match(event.request) //match the request to the cache
-      .then( ()=> { //return a fetch of that request.
-        return fetch(event.request)
-          .catch( (e)=> {
-            return caches.match('offline.html')
-          })
-      })
-  )
-});
+// self.addEventListener('fetch', (event)=> {
+//   event.respondWith( //when we see a fetch request we want to respond with something
+//     caches.match(event.request) //match the request to the cache
+//       .then( ()=> { //return a fetch of that request.
+//         return fetch(event.request)
+//           .catch( (e)=> {
+//             return caches.match('offline.html')
+//           })
+//       })
+//   )
+// });
 
 
 

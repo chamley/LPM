@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useCards } from './hooks/card-hooks';
 
 
@@ -19,13 +19,13 @@ export default function AddCardForm() {
   };
   return(
     <div>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} style={{margin:'100px'}}>
         <p>
           <input
             value={title}
             onChange={e=>setTitle(e.target.value)}
             type="text"
-            placeholder="Please put the nearest town in your title .."
+            placeholder="nearest town/city .."
             required
           />
         </p>
@@ -35,7 +35,7 @@ export default function AddCardForm() {
             onChange={e=>setText(e.target.value)}
             type="textarea"
             style= { {width:300, height:150}}
-            placeholder="Please be as accurate as you can with your location details"
+            placeholder="description/address .."
             required
           />
         </p>

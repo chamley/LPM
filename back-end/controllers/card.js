@@ -15,13 +15,17 @@ const createCard = async (req,res) => {
   }
 }
 
+
+
 const fetchCards = async (req, res) => {
+  console.log('fetchcards called');
   try {
     const cardList = await Card.find({});
     res.status(201).send(cardList);
   } catch (e) {
-    res.status(404).send(`error finding cards: ${e}`);
+    res.status(405).send(`error finding cards: ${e}`);
   }
 }
 
 module.exports = {createCard, fetchCards}
+

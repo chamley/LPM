@@ -10,5 +10,5 @@ export default function AboutPage() {
     <div>
       This is the About Page
     </div>
-  )
+  );
 }

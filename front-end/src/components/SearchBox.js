@@ -16,19 +16,18 @@ export default function SearchBox () {
    }, [text])
   
 
-  const [checked, setChecked] = useState(false);
+  //const [checked, setChecked] = useState(false);
 
-  useEffect( ()=> {
-    if(checked) {
-      textSearch('tomato');
-    } else {
-      textSearch("")
-    }
+  // useEffect( ()=> {
+  //   if(checked) {
+  //     textSearch('tomato');
+  //   } else {
+  //     textSearch("")
+  //   }
     
-  }, [checked] )
+  // }, [checked] )
 
   return(
-    <div>
       
       <input
         value={text}
@@ -37,8 +36,6 @@ export default function SearchBox () {
         placeholder="Search Postings ...."
         required
       />
-
-    </div>
   );
 
 

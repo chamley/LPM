@@ -15,12 +15,13 @@ export function CardProvider ({
   const [cards, setCards] = useState([]);
 
   const loadData = async function () {
-    fetch(API_URL+'/getAllCards', {
+    fetch(API_URL + '/getAllCards', {
       method:'GET',
       mode:'cors',
     })
     .then( res=> res.json())
     .then(res=> setCards(res.map( (card => {
+      //console.log('IMPORTANT:',res);
       const readyCard = {
         ...card,
         shouldRender:true
