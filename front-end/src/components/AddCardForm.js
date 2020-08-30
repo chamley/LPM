@@ -20,7 +20,6 @@ export default function AddCardForm() {
   return(
     <div>
       <form onSubmit={submit} style={{margin:'100px'}}>
-        <p>
           <input
             value={title}
             onChange={e=>setTitle(e.target.value)}
@@ -28,8 +27,6 @@ export default function AddCardForm() {
             placeholder="nearest town/city .."
             required
           />
-        </p>
-        <p>
           <input
             value={text}
             onChange={e=>setText(e.target.value)}
@@ -38,12 +35,9 @@ export default function AddCardForm() {
             placeholder="description/address .."
             required
           />
-        </p>
-        <p>
           <button>
             Declare
           </button>
-        </p>
       </form>
     </div> 
   );
